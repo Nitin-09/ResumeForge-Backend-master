@@ -1,6 +1,6 @@
 const connectToMongo =require('./db')
 const express = require('express')
-// const serverless = require('serverless-http')
+const serverless = require('serverless-http')
 const cors=require('cors')
 connectToMongo();
 
@@ -21,4 +21,4 @@ app.listen(port, () => {
   console.log(`Backend of Resume builder listening on port ${port}`)
 })
 module.exports = app
-// module.exports.handler = serverless(app)
+module.exports.handler = serverless(app)
